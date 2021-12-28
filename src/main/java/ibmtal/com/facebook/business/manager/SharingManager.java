@@ -47,5 +47,10 @@ public class SharingManager implements SharingService {
 		result.setErrors(mesaj);
 		return result;
 	}
+
+	@Override
+	public ArrayList<Sharing> getAll() {
+		return new ArrayList<Sharing>(this.sharingDao.findAll());
+	}
 	
 }
